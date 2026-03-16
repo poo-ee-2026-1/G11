@@ -1,3 +1,7 @@
+# G11
+
+Participantes: André Tavares, Juliane Gregório, Pedro Lourenço.
+
 # ☀️ Sistema de Monitoramento de Usina Fotovoltaica
 
 Sistema de monitoramento que consiga representar equipamentos como inversores, strings e módulos, registrar dados de operação e calcular indicadores como geração total, eficiência de produção e detecção de falhas
@@ -55,5 +59,3 @@ Inicialmente o sistema funcionará no terminal (menu interativo).
 5 - Verificar falhas
 
 6 - Sair
-
-# G11
