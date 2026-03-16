@@ -1,6 +1,6 @@
 # ☀️ Sistema de Monitoramento de Usina Fotovoltaica
 
-Este projeto tem como objetivo desenvolver um sistema simples de monitoramento de uma usina fotovoltaica, capaz de registrar dados de geração de energia e acompanhar o funcionamento dos principais equipamentos da usina.
+Sistema de monitoramento que consiga representar equipamentos como inversores, strings e módulos, registrar dados de operação e calcular indicadores como geração total, eficiência de produção e detecção de falhas
 
 O sistema simula um ambiente de supervisão onde é possível acompanhar a operação de componentes como:
 - inversores
