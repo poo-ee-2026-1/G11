@@ -41,6 +41,10 @@ O sistema deverá permitir:
 - registro de geração de energia
 - cálculo da geração total da usina
 - verificação de possíveis falhas
+- passo a passo para solução das falhas
+- gráfico de geração de cada usina
+- geração anual e comparação de desempenho ao longo dos meses
+- consumo instantâneo
 
 Inicialmente o sistema funcionará no terminal (menu interativo).
 
