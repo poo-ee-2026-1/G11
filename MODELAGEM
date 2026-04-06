@@ -1,6 +1,3 @@
-📂 Estrutura de Classes e Objetos - Projeto G11
-O sistema utiliza os conceitos de Herança e Composição para modelar uma usina fotovoltaica real. Abaixo, detalhamos o que é a estrutura de código (Classes) e o que são os dados em execução (Objetos).
-
 🏗️ Classes (O Molde / Projeto)
 As classes definem quais atributos e comportamentos os componentes terão. No código, são os nossos arquivos .java.
 
