@@ -1,0 +1,12 @@
+public class Modulo {
+    private String modelo;
+    private double potenciaPico; // em Watts (Wp)
+
+    public Modulo(String modelo, double potenciaPico) {
+        this.modelo = modelo;
+        this.potenciaPico = potenciaPico;
+    }
+
+    public String getModelo() { return modelo; }
+    public double getPotenciaPico() { return potenciaPico; }
+}
