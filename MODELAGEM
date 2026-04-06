@@ -1,6 +1,4 @@
-🏗️ Classes (O Molde / Projeto)
-As classes definem quais atributos e comportamentos os componentes terão. No código, são os nossos arquivos .java.
-
+🏗️ Classes
 Equipamento (Superclasse Abstrata):
 
 Papel: Define a base comum para todos os itens da usina.
@@ -33,9 +31,7 @@ Papel: O "cérebro" do sistema que gerencia o conglomerado de equipamentos.
 
 Composição: Possui uma ArrayList<Equipamento> (onde armazena Inversores e Strings).
 
-💎 Objetos (As Instâncias / Equipamentos Reais)
-Os objetos são os dados criados na memória RAM durante o uso do sistema (através do comando new).
-
+💎 Objetos
 Objetos de Modulo:
 
 Ex: painel_A1 (Modelo: Astro 5s, Potência: 550W).
