@@ -1,0 +1,10 @@
+# Ignorar arquivos compilados do Java
+*.class
+bin/
+out/
+
+# Ignorar pastas de configuração do VS Code e Eclipse
+.vscode/
+.settings/
+.classpath
+.project
