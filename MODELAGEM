@@ -1,0 +1,55 @@
+🏗️ Classes
+Equipamento (Superclasse Abstrata):
+
+Papel: Define a base comum para todos os itens da usina.
+
+Atributos: id, marca, modelo, potenciaNominal.
+
+Método Abstrato: exibirDetalhes() (obriga os filhos a se identificarem).
+
+Inversor (Subclasse):
+
+Papel: Representa o equipamento de conversão de energia.
+
+Atributo Específico: tipo (On-grid, Off-grid ou Híbrido).
+
+Modulo (Classe de Componente):
+
+Papel: Representa o painel solar individual.
+
+Atributos: potenciaPico (ex: 550W), tecnologia (Monocristalino).
+
+StringSolar (Subclasse e Agregadora):
+
+Papel: Agrupa um conjunto de módulos em série.
+
+Composição: Possui uma ArrayList<Modulo> (uma lista de objetos do tipo Módulo).
+
+UsinaFotovoltaica (Classe Gerenciadora):
+
+Papel: O "cérebro" do sistema que gerencia o conglomerado de equipamentos.
+
+Composição: Possui uma ArrayList<Equipamento> (onde armazena Inversores e Strings).
+
+💎 Objetos
+Objetos de Modulo:
+
+Ex: painel_A1 (Modelo: Astro 5s, Potência: 550W).
+
+Ex: painel_A2 (Modelo: Astro 5s, Potência: 550W).
+
+Objetos de StringSolar:
+
+Ex: string_Norte (ID: STR-01, contendo 10 objetos de Modulo).
+
+Ex: string_Sul (ID: STR-02, contendo 12 objetos de Modulo).
+
+Objetos de Inversor:
+
+Ex: inversor_Principal (ID: INV-01, Marca: Fronius, Potência: 50kW).
+
+Ex: inversor_Reserva (ID: INV-02, Marca: WEG, Potência: 10kW).
+
+Objeto de UsinaFotovoltaica:
+
+Ex: usina_G11_Goias (Contém todos os objetos de Inversores e Strings listados acima).
