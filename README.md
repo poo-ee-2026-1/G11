@@ -19,7 +19,6 @@ O sistema simula um ambiente de supervisão (SCADA) onde é possível acompanhar
 A partir dessas informações, o sistema poderá calcular a eficiência do clima, validar o acesso de usuários e identificar possíveis falhas operacionais críticas.
 
 # Objetivo
-Por meio da POO, criar um sistema que permita:
 
 - gerenciar acessos de usuários com diferentes permissões (Administrador, Operador, Cliente)
 
@@ -32,7 +31,7 @@ Por meio da POO, criar um sistema que permita:
 - apresentar informações detalhadas por meio de um menu interativo no terminal
 
 # Estrutura inicial
-O sistema está organizado em pacotes de classes que representam os elementos físicos e lógicos da usina:
+Pacotes de classes que representam os elementos físicos e lógicos da usina:
 
 - UsinaFotovoltaica e MenuInterativo (Gerenciamento e Interface)
 
@@ -43,8 +42,6 @@ O sistema está organizado em pacotes de classes que representam os elementos f�
 - Sensor, SensorIrradiacao, SensorTemperatura (Monitoramento Climático)
 
 - Evento, FalhaEquipamento (Logs e Alertas)
-
-Cada classe representa um componente do sistema, utilizando herança e polimorfismo para definir suas respectivas características e restrições.
 
 # Funcionalidades previstas
 
@@ -105,13 +102,12 @@ Métodos Abstratos: exibirDetalhes() em Equipamento, registrarLog() em Evento, l
 - Herança
 Administrador, Cliente e Operador herdam de Usuario. Inversor, StringSolar, ModuloFotovoltaico e MedidorBidirecional herdam de Equipamento. FalhaEquipamento herda de Evento. SensorIrradiacao e SensorTemperatura herdam de Sensor.
 
-- Polimorfismo
-O método exibirDetalhes() da classe abstrata Equipamento é reescrito (@Override) e age de forma diferente para Inversor, StringSolar, ModuloFotovoltaico e MedidorBidirecional. O método exibirMenu() da classe abstrata Usuario é reescrito para responder diferente dependendo se é Administrador, Cliente ou Operador. O método registrarLog() da classe abstrata Evento tem um comportamento específico dentro de FalhaEquipamento. O método lerDados() da classe abstrata Sensor é reescrito dentro de SensorIrradiacao e SensorTemperatura.
+- Polimorfismo: O método exibirDetalhes() de Equipamento para Inversor, StringSolar, ModuloFotovoltaico e MedidorBidirecional. O exibirMenu() de Usuario para Administrador, Cliente ou Operador. O registrarLog() de Evento para FalhaEquipamento. O lerDados() de Sensor para SensorIrradiacao e SensorTemperatura.
 
-- Composição e Agregação
-Composição: A classe UsinaFotovoltaica possui coleções (ArrayList<Equipamento> e ArrayList<Evento>) que gerenciam o ciclo de vida e armazenam os componentes do sistema. MenuInterativo possui internamente a ArrayList<Usuario> bancoDeUsuarios.
-Agregação: A classe StringSolar agrega uma quantidade de módulos (quantidadeModulos).
+- Composição: A classe UsinaFotovoltaica possui coleções (ArrayList<Equipamento> e ArrayList<Evento>) que gerenciam o ciclo de vida e armazenam os componentes do sistema. MenuInterativo possui internamente a ArrayList<Usuario> bancoDeUsuarios.
 
-- Associação e Atribuições
-Associação: A UsinaFotovoltaica usa objetos do tipo SensorIrradiacao e SensorTemperatura de forma transitória nos métodos analisarClima(SensorIrradiacao sensorIrradiacao) e analisarTemperatura(SensorTemperatura sensorTemp), recebendo-os como parâmetros para realizar cálculos de eficiência e acionar alertas.
-Atribuição: A lógica de estado (statusAtivo) modificada via setters; a definição do valor na simulação de sensores (this.valorAtual = valor); a atribuição dos dados passados no construtor de classes com variáveis protegidas (this.id = id, this.nome = nome); e as atribuições para controle de simulação (ex: irr.simularAmbiente(leitor.nextDouble()) e temp.simularAmbiente(leitor.nextDouble()) no MenuInterativo).
+- Agregação: A classe StringSolar agrega uma quantidade de módulos (quantidadeModulos).
+
+- Associação: A UsinaFotovoltaica usa objetos do tipo SensorIrradiacao e SensorTemperatura de forma transitória nos métodos analisarClima(SensorIrradiacao sensorIrradiacao) e analisarTemperatura(SensorTemperatura sensorTemp), usando como parâmetros para realizar cálculos de eficiência e acionar alertas.
+
+- Atribuição: A lógica de estado (statusAtivo) modificada via setters, a definição do valor na simulação de sensores (this.valorAtual = valor), a atribuição dos dados passados no construtor de classes com variáveis protegidas (this.id = id, this.nome = nome), e as atribuições para controle de simulação (ex: irr.simularAmbiente(leitor.nextDouble()) e temp.simularAmbiente(leitor.nextDouble()) no MenuInterativo).
