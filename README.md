@@ -1,50 +1,69 @@
 # G11
-
 Participantes: André Tavares, Juliane Gregório.
 
 # Sistema de Monitoramento de Usina Fotovoltaica
+Sistema de monitoramento que consiga representar equipamentos, registrar dados de operação, analisar a eficiência climática e térmica, e realizar a detecção de falhas de forma interativa.
 
-Sistema de monitoramento que consiga representar equipamentos como inversores, strings e módulos, registrar dados de operação e calcular indicadores como geração total, eficiência de produção e detecção de falhas
+O sistema simula um ambiente de supervisão (SCADA) onde é possível acompanhar a operação de componentes como:
 
-O sistema simula um ambiente de supervisão onde é possível acompanhar a operação de componentes como:
-- inversores
-- strings
-- módulos fotovoltaicos
+inversores
 
-A partir dessas informações, o sistema poderá calcular indicadores básicos de desempenho e identificar possíveis falhas.
+strings solares
 
-# Objetivo do Projeto
+módulos fotovoltaicos
 
+medidores bidirecionais
+
+sensores de irradiação e temperatura
+
+A partir dessas informações, o sistema poderá calcular a eficiência do clima, validar o acesso de usuários e identificar possíveis falhas operacionais críticas.
+
+# Objetivo
 Por meio da POO, criar um sistema que permita:
-- cadastrar equipamentos da usina
-- registrar geração de energia
-- calcular a geração total da usina
-- identificar possíveis falhas nos equipamentos
-- apresentar informações básicas de operação
 
-# Estrutura inicial do sistema
+gerenciar acessos de usuários com diferentes permissões (Administrador, Operador, Cliente)
 
-O sistema será organizado em classes que representam os elementos da usina:
-- Equipamento
-- Inversor
-- StringSolar
-- UsinaFotovoltaica
+configurar dados da usina e instalar equipamentos
 
-Cada classe representará um componente do sistema e suas respectivas características.
+simular leituras ambientais para avaliar a eficiência de produção
+
+registrar eventos e identificar falhas em componentes
+
+apresentar informações detalhadas por meio de um menu interativo no terminal
+
+# Estrutura inicial
+O sistema está organizado em pacotes de classes que representam os elementos físicos e lógicos da usina:
+
+UsinaFotovoltaica e MenuInterativo (Gerenciamento e Interface)
+
+Equipamento, Inversor, StringSolar, ModuloFotovoltaico, MedidorBidirecional (Hardware)
+
+Usuario, Administrador, Operador, Cliente (Controle de Acesso e Autenticação)
+
+Sensor, SensorIrradiacao, SensorTemperatura (Monitoramento Climático)
+
+Evento, FalhaEquipamento (Logs e Alertas)
+
+Cada classe representa um componente do sistema, utilizando herança e polimorfismo para definir suas respectivas características e restrições.
 
 # Funcionalidades previstas
+O sistema permite atualmente:
 
-O sistema deverá permitir:
+cadastro de usuários definindo login, senha e nível de acesso
 
-- cadastro de inversores
-- cadastro de strings solares
-- registro de geração de energia
-- cálculo da geração total da usina
-- verificação de possíveis falhas
-- passo a passo para solução das falhas
-- gráfico de geração de cada usina
-- geração anual e comparação de desempenho ao longo dos meses
-- consumo instantâneo
+tela de login com autenticação obrigatória
+
+navegação completa via Menu Interativo
+
+instalação de equipamentos (Inversor e String) restrita a Administradores
+
+simulação de leituras ambientais (irradiação atual vs. STC e temperatura dos módulos)
+
+análise e emissão de alertas automáticos sobre perda de eficiência térmica ou baixa irradiação
+
+visualização de relatórios listando os detalhes dos equipamentos cadastrados
+
+registro estruturado e verificação de alertas de falhas de sistema
 
 # Cronograma semanal
 
