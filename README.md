@@ -1,5 +1,5 @@
 # G11
-Participantes: André Tavares, Juliane Gregório.
+Participantes: André Tavares, Juliane Gregório e Henrique Ferreira da Silva.
 
 # Sistema de Monitoramento de Usina Fotovoltaica
 Sistema de monitoramento que consiga representar equipamentos, registrar dados de operação, analisar a eficiência climática e térmica, e realizar a detecção de falhas de forma interativa.
