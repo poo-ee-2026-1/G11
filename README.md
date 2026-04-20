@@ -1,6 +1,6 @@
 # G11
 
-Participantes: André Tavares, Juliane Gregório, Pedro Lourenço.
+Participantes: André Tavares, Juliane Gregório.
 
 # ☀️ Sistema de Monitoramento de Usina Fotovoltaica
 
@@ -70,9 +70,9 @@ O sistema deverá permitir:
 
 # Resumo dos conceitos aplicados até o momento:
 
-- Classes e Objetos
-Classes Principais: UsinaFotovoltaica, Equipamento, Inversor, StringSolar, ModuloFotovoltaico, MedidorBidirecional, Usuario, Administrador, Cliente, Operador, Evento, FalhaEquipamento, Sensor, SensorIrradiacao, SensorTemperatura e MenuInterativo.
-Objetos: new UsinaFotovoltaica(nomeUsina, local), new Administrador(nomeUser, loginUser, senhaUser), new Cliente(nomeUser, loginUser, senhaUser), new Operador(nome, login, senha), new Inversor(id, "Fronius", 50.0), new StringSolar(id, "Canadian", 15.0, 20), new ModuloFotovoltaico(id, marca, potencia), new MedidorBidirecional(id, marca), new SensorIrradiacao("S-IRR-01"), new SensorTemperatura("S-TEMP-01") e new FalhaEquipamento("Hoje", "Teste de Sistema", "N/A").
+- Classes Principais: UsinaFotovoltaica, Equipamento, Inversor, StringSolar, ModuloFotovoltaico, MedidorBidirecional, Usuario, Administrador, Cliente, Operador, Evento, FalhaEquipamento, Sensor, SensorIrradiacao, SensorTemperatura e MenuInterativo.
+
+- Objetos: new UsinaFotovoltaica(nomeUsina, local), new Administrador(nomeUser, loginUser, senhaUser), new Cliente(nomeUser, loginUser, senhaUser), new Operador(nome, login, senha), new Inversor(id, "Fronius", 50.0), new StringSolar(id, "Canadian", 15.0, 20), new ModuloFotovoltaico(id, marca, potencia), new MedidorBidirecional(id, marca), new SensorIrradiacao("S-IRR-01"), new SensorTemperatura("S-TEMP-01") e new FalhaEquipamento("Hoje", "Teste de Sistema", "N/A").
 
 - Encapsulamento e Modificadores de Acesso
 private: idEquipamentoFalho em FalhaEquipamento; quantidadeModulos em StringSolar; nome, localidade, irradiacaoReferencia, equipamentos, logEventos em UsinaFotovoltaica; dataHora e descricao em Evento.
