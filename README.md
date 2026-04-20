@@ -46,7 +46,7 @@ O sistema deverá permitir:
 - geração anual e comparação de desempenho ao longo dos meses
 - consumo instantâneo
 
-# Cronograma semanal - Sistema de Monitoramento de Usina Fotovoltaica
+# Cronograma semanal
 
 -Semana 1: planejamento e modelagem
 
