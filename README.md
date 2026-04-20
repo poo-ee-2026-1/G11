@@ -6,64 +6,63 @@ Sistema de monitoramento que consiga representar equipamentos, registrar dados d
 
 O sistema simula um ambiente de supervisão (SCADA) onde é possível acompanhar a operação de componentes como:
 
-inversores
+- inversores
 
-strings solares
+- strings solares
 
-módulos fotovoltaicos
+- módulos fotovoltaicos
 
-medidores bidirecionais
+- medidores bidirecionais
 
-sensores de irradiação e temperatura
+- sensores de irradiação e temperatura
 
 A partir dessas informações, o sistema poderá calcular a eficiência do clima, validar o acesso de usuários e identificar possíveis falhas operacionais críticas.
 
 # Objetivo
 Por meio da POO, criar um sistema que permita:
 
-gerenciar acessos de usuários com diferentes permissões (Administrador, Operador, Cliente)
+- gerenciar acessos de usuários com diferentes permissões (Administrador, Operador, Cliente)
 
-configurar dados da usina e instalar equipamentos
+- configurar dados da usina e instalar equipamentos
 
-simular leituras ambientais para avaliar a eficiência de produção
+- simular leituras ambientais para avaliar a eficiência de produção
 
-registrar eventos e identificar falhas em componentes
+- registrar eventos e identificar falhas em componentes
 
-apresentar informações detalhadas por meio de um menu interativo no terminal
+- apresentar informações detalhadas por meio de um menu interativo no terminal
 
 # Estrutura inicial
 O sistema está organizado em pacotes de classes que representam os elementos físicos e lógicos da usina:
 
-UsinaFotovoltaica e MenuInterativo (Gerenciamento e Interface)
+- UsinaFotovoltaica e MenuInterativo (Gerenciamento e Interface)
 
-Equipamento, Inversor, StringSolar, ModuloFotovoltaico, MedidorBidirecional (Hardware)
+- Equipamento, Inversor, StringSolar, ModuloFotovoltaico, MedidorBidirecional (Hardware)
 
-Usuario, Administrador, Operador, Cliente (Controle de Acesso e Autenticação)
+- Usuario, Administrador, Operador, Cliente (Controle de Acesso e Autenticação)
 
-Sensor, SensorIrradiacao, SensorTemperatura (Monitoramento Climático)
+- Sensor, SensorIrradiacao, SensorTemperatura (Monitoramento Climático)
 
-Evento, FalhaEquipamento (Logs e Alertas)
+- Evento, FalhaEquipamento (Logs e Alertas)
 
 Cada classe representa um componente do sistema, utilizando herança e polimorfismo para definir suas respectivas características e restrições.
 
 # Funcionalidades previstas
-O sistema permite atualmente:
 
-cadastro de usuários definindo login, senha e nível de acesso
+- cadastro de usuários definindo login, senha e nível de acesso
 
-tela de login com autenticação obrigatória
+- tela de login com autenticação obrigatória
 
-navegação completa via Menu Interativo
+- navegação via Menu Interativo
 
-instalação de equipamentos (Inversor e String) restrita a Administradores
+- instalação de equipamentos (Inversor e String) restrita a Administradores
 
-simulação de leituras ambientais (irradiação atual vs. STC e temperatura dos módulos)
+- simulação de leituras ambientais (irradiação atual vs. STC e temperatura dos módulos)
 
-análise e emissão de alertas automáticos sobre perda de eficiência térmica ou baixa irradiação
+- análise e emissão de alertas automáticos sobre perda de eficiência térmica ou baixa irradiação
 
-visualização de relatórios listando os detalhes dos equipamentos cadastrados
+- visualização de relatórios listando os detalhes dos equipamentos cadastrados
 
-registro estruturado e verificação de alertas de falhas de sistema
+- registro estruturado e verificação de alertas de falhas de sistema
 
 # Cronograma semanal
 
