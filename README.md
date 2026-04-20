@@ -48,25 +48,25 @@ O sistema deverá permitir:
 
 # Cronograma semanal
 
--Semana 1: planejamento e modelagem
+- Semana 1: planejamento e modelagem
 
--Semana 2: criação das classes
+- Semana 2: criação das classes
 
--Semana 3: estrutura da usina
+- Semana 3: estrutura da usina
 
--Semana 4: cadastro de equipamentos
+- Semana 4: cadastro de equipamentos
 
--Semana 5: menu interativo
+- Semana 5: menu interativo
 
--Semana 6: registro de geração
+- Semana 6: registro de geração
 
--Semana 7: cálculo da geração
+- Semana 7: cálculo da geração
 
--Semana 8: detecção de falhas
+- Semana 8: detecção de falhas
 
--Semana 9: testes e ajustes
+- Semana 9: testes e ajustes
 
--Semana 10: finalização e apresentação
+- Semana 10: finalização e apresentação
 
 # Resumo dos conceitos aplicados até o momento:
 
