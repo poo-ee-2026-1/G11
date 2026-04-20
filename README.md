@@ -2,7 +2,7 @@
 
 Participantes: André Tavares, Juliane Gregório.
 
-# ☀️ Sistema de Monitoramento de Usina Fotovoltaica
+# Sistema de Monitoramento de Usina Fotovoltaica
 
 Sistema de monitoramento que consiga representar equipamentos como inversores, strings e módulos, registrar dados de operação e calcular indicadores como geração total, eficiência de produção e detecção de falhas
 
@@ -13,7 +13,7 @@ O sistema simula um ambiente de supervisão onde é possível acompanhar a opera
 
 A partir dessas informações, o sistema poderá calcular indicadores básicos de desempenho e identificar possíveis falhas.
 
-# ⚡ Objetivo do Projeto
+# Objetivo do Projeto
 
 Por meio da POO, criar um sistema que permita:
 - cadastrar equipamentos da usina
@@ -22,7 +22,7 @@ Por meio da POO, criar um sistema que permita:
 - identificar possíveis falhas nos equipamentos
 - apresentar informações básicas de operação
 
-# 🧱 Estrutura inicial do sistema
+# Estrutura inicial do sistema
 
 O sistema será organizado em classes que representam os elementos da usina:
 - Equipamento
@@ -32,7 +32,7 @@ O sistema será organizado em classes que representam os elementos da usina:
 
 Cada classe representará um componente do sistema e suas respectivas características.
 
-# ⚙️ Funcionalidades previstas
+# Funcionalidades previstas
 
 O sistema deverá permitir:
 
