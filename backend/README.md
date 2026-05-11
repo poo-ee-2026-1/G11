@@ -1,218 +1,113 @@
 # G11
+Participantes: André Tavares, Juliane Gregório e Henrique Ferreira da Silva.
 
-Participantes: André Tavares, Juliane Gregório, Pedro Lourenço.
+# Sistema de Monitoramento de Usina Fotovoltaica
+Sistema de monitoramento que consiga representar equipamentos, registrar dados de operação, analisar a eficiência climática e térmica, e realizar a detecção de falhas de forma interativa.
 
-# ☀️ Sistema de Monitoramento de Usina Fotovoltaica
+O sistema simula um ambiente de supervisão (SCADA) onde é possível acompanhar a operação de componentes como:
 
-Sistema de monitoramento que consiga representar equipamentos como inversores, strings e módulos, registrar dados de operação e calcular indicadores como geração total, eficiência de produção e detecção de falhas
-
-O sistema simula um ambiente de supervisão onde é possível acompanhar a operação de componentes como:
 - inversores
-- strings
+
+- strings solares
+
 - módulos fotovoltaicos
 
-A partir dessas informações, o sistema poderá calcular indicadores básicos de desempenho e identificar possíveis falhas.
+- medidores bidirecionais
 
-# ⚡ Objetivo do Projeto
+- sensores de irradiação e temperatura
 
-Por meio da POO, criar um sistema que permita:
-- cadastrar equipamentos da usina
-- registrar geração de energia
-- calcular a geração total da usina
-- identificar possíveis falhas nos equipamentos
-- apresentar informações básicas de operação
+A partir dessas informações, o sistema poderá calcular a eficiência do clima, validar o acesso de usuários e identificar possíveis falhas operacionais críticas.
 
-# 🧱 Estrutura inicial do sistema
+# Objetivo
 
-O sistema será organizado em classes que representam os elementos da usina:
-- Equipamento
-- Inversor
-- StringSolar
-- UsinaFotovoltaica
+- gerenciar acessos de usuários com diferentes permissões (Administrador, Operador, Cliente)
 
-Cada classe representará um componente do sistema e suas respectivas características.
+- configurar dados da usina e instalar equipamentos
 
-# ⚙️ Funcionalidades previstas
+- simular leituras ambientais para avaliar a eficiência de produção
 
-O sistema deverá permitir:
+- registrar eventos e identificar falhas em componentes
 
-- cadastro de inversores
-- cadastro de strings solares
-- registro de geração de energia
-- cálculo da geração total da usina
-- verificação de possíveis falhas
-- passo a passo para solução das falhas
-- gráfico de geração de cada usina
-- geração anual e comparação de desempenho ao longo dos meses
-- consumo instantâneo
+- apresentar informações detalhadas por meio de um menu interativo no terminal
 
-Inicialmente o sistema funcionará no terminal (menu interativo).
+# Estrutura inicial
+Pacotes de classes que representam os elementos físicos e lógicos da usina:
 
-# 🖥️ Exemplo de funcionamento esperado
+- UsinaFotovoltaica e MenuInterativo (Gerenciamento e Interface)
 
-=== SISTEMA DE MONITORAMENTO FOTOVOLTAICO ===
+- Equipamento, Inversor, StringSolar, ModuloFotovoltaico, MedidorBidirecional (Hardware)
 
-1 - Cadastrar inversor
+- Usuario, Administrador, Operador, Cliente (Controle de Acesso e Autenticação)
 
-2 - Cadastrar string
+- Sensor, SensorIrradiacao, SensorTemperatura (Monitoramento Climático)
 
-3 - Registrar geração
+- Evento, FalhaEquipamento (Logs e Alertas)
 
-4 - Exibir geração total
+# Funcionalidades previstas
 
-5 - Verificar falhas
+- cadastro de usuários definindo login, senha e nível de acesso
 
-6 - Sair
+- tela de login com autenticação obrigatória
 
+- navegação via Menu Interativo
 
-# Cronograma semanal - Sistema de Monitoramento de Usina Fotovoltaica
+- instalação de equipamentos (Inversor e String) restrita a Administradores
 
--Semana 1: planejamento e modelagem
+- simulação de leituras ambientais (irradiação atual vs. STC e temperatura dos módulos)
 
--Semana 2: criação das classes
+- análise e emissão de alertas automáticos sobre perda de eficiência térmica ou baixa irradiação
 
--Semana 3: estrutura da usina
+- visualização de relatórios listando os detalhes dos equipamentos cadastrados
 
--Semana 4: cadastro de equipamentos
+- registro estruturado e verificação de alertas de falhas de sistema
 
--Semana 5: menu interativo
+# Cronograma semanal
 
--Semana 6: registro de geração
+- Semana 1: planejamento e modelagem
 
--Semana 7: cálculo da geração
+- Semana 2: criação das classes
 
--Semana 8: detecção de falhas
+- Semana 3: estrutura da usina
 
--Semana 9: testes e ajustes
+- Semana 4: cadastro de equipamentos
 
--Semana 10: finalização e apresentação
+- Semana 5: menu interativo
 
-# Semana 1 (23/03 a 29/03) - Levantamento e modelagem do projeto
+- Semana 6: registro de geração
 
-Objetivo: entender o problema e desenhar a estrutura orientada a objetos.
+- Semana 7: cálculo da geração
 
-Atividades:
-- definir o escopo final do sistema
-- listar atributos e métodos de cada classe
-- modelar as classes:
-Equipamento
-Inversor
-StringSolar
-UsinaFotovoltaica
-- definir como será o relacionamento entre elas
-- planejar o fluxo do menu interativo
-Entregas:
-- diagrama simples das classes
-- lista de funcionalidades
-- estrutura inicial dos arquivos do projeto
+- Semana 8: detecção de falhas
 
-# Semana 2 (30/03 a 05/04) - Implementação das classes base
-Objetivo: criar a base do sistema.
+- Semana 9: testes e ajustes
 
-Atividades:
-- implementar a classe Equipamento
-- implementar a classe Inversor
-- implementar a classe StringSolar
-- definir construtores, atributos e métodos básicos
-- criar métodos para exibir informações dos equipamentos
-Entregas:
-- classes criadas e funcionando
-- testes simples de instanciação no terminal
+- Semana 10: finalização e apresentação
 
-# Semana 3 (06/04 a 12/04) - Estrutura da usina
-Objetivo: permitir que a usina gerencie os componentes cadastrados.
+# Resumo dos conceitos aplicados até o momento:
 
-Atividades:
-- implementar a classe UsinaFotovoltaica
-- adicionar listas para armazenar inversores e strings
-- estruturar o relacionamento entre os objetos
-Entregas:
-- classe usina funcional
-- estrutura de armazenamento funcionando
+- Classes Principais: UsinaFotovoltaica, Equipamento, Inversor, StringSolar, ModuloFotovoltaico, MedidorBidirecional, Usuario, Administrador, Cliente, Operador, Evento, FalhaEquipamento, Sensor, SensorIrradiacao, SensorTemperatura e MenuInterativo.
 
-# Semana 4 (13/04 a 19/04) - Cadastro de equipamentos
-Objetivo: permitir cadastro via sistema.
+- Objetos: new UsinaFotovoltaica(nomeUsina, local), new Administrador(nomeUser, loginUser, senhaUser), new Cliente(nomeUser, loginUser, senhaUser), new Operador(nome, login, senha), new Inversor(id, "Fronius", 50.0), new StringSolar(id, "Canadian", 15.0, 20), new ModuloFotovoltaico(id, marca, potencia), new MedidorBidirecional(id, marca), new SensorIrradiacao("S-IRR-01"), new SensorTemperatura("S-TEMP-01") e new FalhaEquipamento("Hoje", "Teste de Sistema", "N/A").
 
-Atividades:
-- criar função de cadastro de inversores
-- criar função de cadastro de strings solares
-- validar entradas básicas do usuário
-Entregas:
-- sistema já cadastra equipamentos pelo menu
-- associação de equipamentos dentro da usina funcionando
+- Encapsulamento e Modificadores de Acesso
+private: idEquipamentoFalho em FalhaEquipamento; quantidadeModulos em StringSolar; nome, localidade, irradiacaoReferencia, equipamentos, logEventos em UsinaFotovoltaica; dataHora e descricao em Evento.
+protected: valorAtual na classe Sensor.
+public: getId(), getMarca(), getPotencia(), isAtivo(), setStatus(), exibirDetalhes() em Equipamento (e derivadas); getDescricao(), registrarLog() em Evento (e derivadas); getNome(), getNivelAcesso(), autenticar(), exibirMenu() em Usuario (e derivadas); simularAmbiente(), lerDados() em Sensor (e derivadas); setIrradiacaoReferencia(), adicionarEquipamento(), registrarEvento(), listarEquipamentos(), analisarClima(), analisarTemperatura() em UsinaFotovoltaica; e o método main() em MenuInterativo.
+final: id, marca e potencia em Equipamento; id em Sensor; nome, login, senha e nivelAcesso em Usuario.
 
-# Semana 5 (20/04 a 26/04) - Menu interativo
-Objetivo: implementar a interface do sistema.
+- Abstração
+Classes Abstratas: Equipamento, Evento, Sensor e Usuario.
+Métodos Abstratos: exibirDetalhes() em Equipamento, registrarLog() em Evento, lerDados() em Sensor e exibirMenu() em Usuario.
 
-Atividades:
-- desenvolver menu no terminal
-- implementar navegação entre opções
-- organizar fluxo do sistema
-Entregas:
-- menu funcional
-- interação básica com o usuário
+- Herança
+Administrador, Cliente e Operador herdam de Usuario. Inversor, StringSolar, ModuloFotovoltaico e MedidorBidirecional herdam de Equipamento. FalhaEquipamento herda de Evento. SensorIrradiacao e SensorTemperatura herdam de Sensor.
 
-# Semana 6 (27/04 a 03/05) - Registro de geração
-Objetivo: registrar dados de produção.
+- Polimorfismo: O método exibirDetalhes() de Equipamento para Inversor, StringSolar, ModuloFotovoltaico e MedidorBidirecional. O exibirMenu() de Usuario para Administrador, Cliente ou Operador. O registrarLog() de Evento para FalhaEquipamento. O lerDados() de Sensor para SensorIrradiacao e SensorTemperatura.
 
-Atividades:
-- criar funcionalidade para registrar geração de energia
-- armazenar geração por inversor ou string
-- validar entradas de dados
-Entregas:
-- registro de geração funcionando
+- Composição: A classe UsinaFotovoltaica possui coleções (ArrayList<Equipamento> e ArrayList<Evento>) que gerenciam o ciclo de vida e armazenam os componentes do sistema. MenuInterativo possui internamente a ArrayList<Usuario> bancoDeUsuarios.
 
-# Semana 7 (04/05 a 10/05) - Cálculo de geração total
-Objetivo: consolidar dados de produção.
+- Agregação: A classe StringSolar agrega uma quantidade de módulos (quantidadeModulos).
 
-Atividades:
-- implementar cálculo da geração total da usina
-- exibir a geração total no terminal
-- organizar melhor a saída das informações
-Entregas:
-- cálculo da geração total funcionando corretamente
+- Associação: A UsinaFotovoltaica usa objetos do tipo SensorIrradiacao e SensorTemperatura de forma transitória nos métodos analisarClima(SensorIrradiacao sensorIrradiacao) e analisarTemperatura(SensorTemperatura sensorTemp), usando como parâmetros para realizar cálculos de eficiência e acionar alertas.
 
-# Semana 8 (11/05 a 17/05) - Verificação de falhas
-Objetivo: adicionar inteligência ao sistema.
-
-Atividades:
-- definir critérios de falha, por exemplo:
-- equipamento sem geração
-- geração abaixo de um valor mínimo
-- equipamento inativo
-- criar método de verificação de falhas
-- exibir mensagens de alerta no menu
-Entregas:
-- sistema detecta falhas básicas
-- relatório simples de falhas no terminal
-
-# Semana 9 (18/05 a 24/05) - Testes e ajustes
-Objetivo: garantir estabilidade do sistema.
-
-Atividades:
-- testar cenários normais e com falhas
-- corrigir erros encontrados
-- melhorar organização do código
-Entregas:
-sistema estável e funcional
-
-# Semana 10 (25/05 a 01/06) - Integração final, testes e apresentação
-Objetivo: finalizar o projeto e preparar entrega/apresentação.
-
-Atividades:
-- revisar código
-- melhorar organização e legibilidade
-- testar todas as opções do menu:
-- cadastrar inversor
-- cadastrar string
-- registrar geração
-- exibir geração total
-- verificar falhas
-- sair
-- preparar explicação das classes e funcionamento do sistema
-Entregas:
-- projeto final funcional
-- código revisado
-- material pronto para apresentação em 01/06/2026
-validação de entrada
-exibição detalhada dos equipamentos
+- Atribuição: A lógica de estado (statusAtivo) modificada via setters, a definição do valor na simulação de sensores (this.valorAtual = valor), a atribuição dos dados passados no construtor de classes com variáveis protegidas (this.id = id, this.nome = nome), e as atribuições para controle de simulação (ex: irr.simularAmbiente(leitor.nextDouble()) e temp.simularAmbiente(leitor.nextDouble()) no MenuInterativo).
