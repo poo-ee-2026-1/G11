@@ -1,5 +1,5 @@
 public class FalhaEquipamento extends Evento {
-    private String idEquipamentoFalho;
+    private final String idEquipamentoFalho;
 
     public FalhaEquipamento(String dataHora, String descricao, String idEquipamentoFalho) {
         super(dataHora, descricao);
@@ -8,6 +8,7 @@ public class FalhaEquipamento extends Evento {
 
     @Override
     public void registrarLog() {
-        System.out.println("⚠️ ALERTA CRÍTICO: Falha no equipamento " + idEquipamentoFalho + " -> " + getDescricao());
+        System.out.println("[" + getDataHora() + "] ⚠️ ALERTA CRÍTICO: Falha no equipamento " 
+                           + idEquipamentoFalho + " -> " + getDescricao());
     }
 }

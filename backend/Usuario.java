@@ -1,5 +1,4 @@
 public abstract class Usuario {
-    // Adicionamos o 'final' porque o nome, login e senha não mudam depois de criados
     private final String nome;
     private final String login;
     private final String senha;
@@ -12,7 +11,6 @@ public abstract class Usuario {
         this.nivelAcesso = nivelAcesso;
     }
 
-    // Ter os Getters faz o aviso de "never read" sumir!
     public String getNome() { return nome; }
     public String getNivelAcesso() { return nivelAcesso; }
 

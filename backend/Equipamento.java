@@ -1,24 +1,26 @@
 public abstract class Equipamento {
-    // ID, marca e potência não mudam depois de fabricados (final)
-    private final String id;
-    private final String marca;
-    private final double potencia;
-    
-    private boolean statusAtivo; 
+    protected String id;
+    protected String marca;
+    protected double potencia; // Em kW
+    protected double geracaoAtual; // Em kWh
 
     public Equipamento(String id, String marca, double potencia) {
         this.id = id;
         this.marca = marca;
         this.potencia = potencia;
-        this.statusAtivo = true; 
+        this.geracaoAtual = 0.0;
     }
 
     public String getId() { return id; }
     public String getMarca() { return marca; }
     public double getPotencia() { return potencia; }
-    public boolean isAtivo() { return statusAtivo; }
-    
-    public void setStatus(boolean status) { this.statusAtivo = status; }
+    public double getGeracaoAtual() { return geracaoAtual; }
+
+    public void registrarGeracao(double valor) {
+        if (valor > 0) {
+            this.geracaoAtual += valor;
+        }
+    }
 
     public abstract void exibirDetalhes();
 }
